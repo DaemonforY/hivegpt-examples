@@ -1,0 +1,2 @@
+openai>=2.0
+python-docx>=1.1   # 只有 summarize_docs.py 需要

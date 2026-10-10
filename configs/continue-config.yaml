@@ -1,0 +1,17 @@
+# Continue（VS Code / JetBrains）：保存为 ~/.continue/config.yaml，
+# 并在 ~/.continue/.env 里写一行 HIVEGPT_API_KEY=sk-你的Key
+# 教程：https://hivegpt.cn/learn/connect/continue.html
+name: HiveGPT
+version: 0.0.1
+schema: v1
+
+models:
+  - name: GPT-5.5（HiveGPT）
+    provider: openai
+    model: gpt-5.5
+    apiBase: https://hivegpt.cn/v1
+    apiKey: ${{ secrets.HIVEGPT_API_KEY }}
+    roles: [chat, edit, apply]      # 不要加 autocomplete / embed
+    capabilities: [tool_use, image_input]
+    defaultCompletionOptions:
+      contextLength: 272000

@@ -1,0 +1,12 @@
+# Codex CLI：保存为 ~/.codex/config.toml，Key 放在环境变量 HIVEGPT_API_KEY 里。
+# 更完整的配置（含模型目录 codex-models.json）在 HiveGPT「API 密钥」页点「使用密钥」→ Codex 一键生成。
+# 教程：https://hivegpt.cn/learn/codex/hivegpt.html
+model_provider = "hivegpt"
+model = "gpt-5.5"
+review_model = "gpt-5.5"
+
+[model_providers.hivegpt]
+name = "HiveGPT"
+base_url = "https://hivegpt.cn/v1"
+wire_api = "responses"
+env_key = "HIVEGPT_API_KEY"
